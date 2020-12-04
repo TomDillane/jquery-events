@@ -1,14 +1,24 @@
-$(document).ready(function(){
-    $(".box").on("click", function(){
-        let classNames = $(this).attr("class").split(" ");
-       let boxClass = classNames[0];
-       let className = classNames[1];
-       if($(this).css("background-color")=="rgb(255, 0, 0)") {
-           $("." + className).css("background-color", "#000");
-       }
-       else {
-           $("." + boxClass).css("background-color", "#000");
-           $("." + className).css("background-color", "red");
-       }
-    });
-});d
+$(document).ready(function() {
+ 
+
+ 	$("#stream1_btn").on("click", function() {
+ 		$(".stream1").removeClass('highlight_stream');
+		$(".stream2").removeClass('highlight_stream');
+		$(".stream3").removeClass('highlight_stream');
+	  	$(".stream1").addClass('highlight_stream');
+	});
+	$("#stream2_btn").on("click", function() {
+		$(".stream1").removeClass('highlight_stream');
+		$(".stream2").removeClass('highlight_stream');
+		$(".stream3").removeClass('highlight_stream');
+	  	$(".stream2").addClass('highlight_stream');
+	});
+	$("#stream3_btn").on("click", function() {
+		$(".stream1").removeClass('highlight_stream');
+		$(".stream2").removeClass('highlight_stream');
+		$(".stream3").removeClass('highlight_stream');
+	  	$(".stream3").addClass('highlight_stream');
+	});
+
+
+}); 
